@@ -1,0 +1,115 @@
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+  
+nav li {
+  float: left;
+}
+  
+nav li a {
+  display: block;
+  color: #ddd;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+  
+  /* Change the link color to #111 (black) on hover */
+nav li a:hover {
+  background-color: #111;
+  color: #fff;
+  animation: 0.5s 1 linear headeranimin; 
+}
+
+nav li a:not(:hover) {
+    background-color: #333;
+    color: #ddd;
+    animation: 0.5s 1 linear headeranimout;
+}
+
+html,body {
+    margin: 0;
+    padding: 0;
+    background: #333;
+    color: #ddd
+}
+
+.centered {
+    text-align: center;
+}
+
+.main-header {
+    font-family: neontubes;
+    font-size: 6pc;
+    color: lavenderblush;
+    text-shadow: 0 0 40px plum, 0 0 30px plum, 0 0 20px plum, -1px 0 pink, 0 1px pink, 1px 0 pink, 0 -1px pink;
+}
+
+.main-subheader {
+    font-family: neontubes;
+    font-size: 1.5pc;
+    color: lavender;
+    text-shadow: 0 0 20px skyblue, 0 0 40px lavender;
+} 
+
+.headerio {
+    animation: 2s 1 linear neonflash;
+}
+
+@font-face {
+  font-family: neontubes;
+  src: url(../fonts/NeonTubes2.otf);
+}
+
+@keyframes headeranimin {
+    0% {
+        background-color: #333;
+        color: #ddd;
+    }
+    100% {
+        background-color: #111;
+        color: #fff;
+    }
+}
+
+@keyframes headeranimout {
+    0% {
+        background-color: #111;
+        color: #fff;
+    }
+    100% {
+        background-color: #333;
+        color: #ddd;
+    }
+}
+
+@keyframes neonflash {
+    0% {
+        text-shadow: none;
+        color: black;
+    }
+    /* 40% {
+        text-shadow: none;
+        color: black;
+    }
+    41% {
+        color: pink;
+        text-shadow: 0 0 40px plum, 0 0 30px plum, 0 0 20px plum;
+    }
+    55% {
+        text-shadow: none;
+        color: black;
+    } */
+    75% {
+        text-shadow: none;
+        color: black;
+    }
+    100% {
+        color: lavenderblush;
+        text-shadow: 0 0 40px plum, 0 0 30px plum, 0 0 20px plum, -1px 0 pink, 0 1px pink, 1px 0 pink, 0 -1px pink;
+    }
+}
